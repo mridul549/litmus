@@ -48,6 +48,7 @@ func init() {
 }
 
 func main() {
+	fmt.Println("Hi")
 	// send logs to stderr so we can use 'kubectl logs'
 	_ = flag.Set("logtostderr", "true")
 	_ = flag.Set("v", "3")
