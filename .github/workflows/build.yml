@@ -63,6 +63,11 @@ jobs:
         run: |
           cd chaoscenter
           make backend-services-checks
+      
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   frontend-checks:
     runs-on: ubuntu-latest
